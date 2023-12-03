@@ -13,24 +13,25 @@
 
 
 <body>
-    <div class="container text-center">
+    <div class="container text-center mt-5 mb-3">
         <a href="index.html"><img src="img/moneytree.png" alt="" style="width: 100px" height="100px"></a>
     </div>
 
-    <div class="container ">
+    <div class="container">
         <div class="row">
-            <div class=" mb-3 col ">
-                <label for="nomeInput" class="form-label">Nome</label>
-                <input type="text" class="form-control border-color" placeholder="Username" aria-label="Username"
-                    aria-describedby="basic-addon1">
-            </div>
+            <div class="input-group mb-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control border-color" id="floatingInputGroup1" placeholder="Username">
+                  <label for="floatingInputGroup1">Username</label>
+                </div>
+              </div>
         </div>
 
         <div class="mb-3 col form-floating">
 
             <input type="email" class="form-control border-color" id="floatingInput" aria-describedby="emailHelp"
                 placeholder="Email">
-                <label for="floatingInput" class="form-label">Email</label>
+            <label for="floatingInput" class="form-label">Email</label>
         </div>
         <div class="row">
             <div class=" col-6">
@@ -44,32 +45,32 @@
             </div>
         </div>
 
-        <div id="passwordHelpBlock" class="form-text mb-3 col">
-            <label for="inputPassword5 " class="form-label">Senha</label>
-            <input type="password" id="inputPassword5" class="form-control border-color" aria-describedby="passwordHelpBlock">
-        </div>
+        <div class="form-floating mb-3 mt-3">
+            <input type="password" class="form-control border-color" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
 
-        <div class="mb-3 col " >
-            <label for="inputPasswordConfirm" class="form-label">Confirme a senha</label>
-            <input type="password" id="inputPasswordConfirm" class="form-control border-color testeaa">
-        </div>
+          <div class="form-floating">
+            <input type="password" class="form-control border-color" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Confirmar Senha</label>
+          </div>
 
-        <div class="container">
+        <div class="container mt-3">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
                 <label class="form-check-label" for="flexCheckIndeterminate">
-                  Confirmar Termos
+                    Confirmar Termos
                 </label>
-              </div>
+            </div>
         </div>
 
-        <div class="col-12 text-center" >
+        <div class="col-12 text-center">
             <button type="submit" class="btn btn-outline-success btn-lg color-button">Sign in</button>
-          </div>
+        </div>
 
     </div>
 
-    
+
 
 
     <script>
@@ -84,23 +85,6 @@
         });
     </script>
 
-    <script>
-        $(document).ready(function () {
-            $('#inputPassword5, #inputPasswordConfirm').on('keyup', function () {
-                var password = $('#inputPassword5').val();
-                var confirmPassword = $('#inputPasswordConfirm').val();
-                var message = '';
-
-                if (password === confirmPassword) {
-                    message = 'Senhas coincidem.';
-                } else {
-                    message = 'Senhas não coincidem.';
-                }
-
-                $('#passwordMatch').text(message);
-            });
-        });
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
